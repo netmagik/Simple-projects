@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object Syntax Practice</title>
+    <style>
+        .preview {
+            width: 90%;
+            max-width: 700px;
+            border: 1px solid #4D4E53;
+            border-radius: 2px;
+            padding: 10px 14px 10px 10px;
+            margin-bottom: 10px;
+        }
+        p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+    </style>
+  </head>
+  <body>
+      <h1>Objects Syntax Practice</h1>
+      <section class="preview">
+
+      </section>
+
+      <script>
+
+            let bandInfo;
+
+            let favoriteBand = {
+            name: 'My Band',
+            nationality: 'American',
+            genre: 'pop',
+            members: 5,
+            formed: '1999',
+            split: false,
+            albums: [
+            {name: 'Album 1', released: '2020'},
+            {name: 'Album 2', released: '1999'},
+            {name: 'Album 3', released: '2005'}
+            ]
+            }
+
+            bandInfo = `My Favorite Band is ${ favoriteBand.name },  
+            nationality:  ${ favoriteBand.nationality }, 
+            genre: ${ favoriteBand.genre }, 
+            with ${ favoriteBand.members } members, 
+            formed in ${ favoriteBand.formed }, 
+            their first album: ${ favoriteBand.albums[0].name }, 
+            was released in ${favoriteBand.albums[0].released}.`;
+
+            let section = document.querySelector('section');
+            let para1 = document.createElement('p');
+            para1.textContent = bandInfo;
+            section.appendChild(para1);
+                
+
+        </script>
+</body>
+</html>
